@@ -1,7 +1,6 @@
 
 
 set -- `who`
-t=$4
 u=`whoami`
 for i in $*
 do
