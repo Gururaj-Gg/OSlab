@@ -1,28 +1,14 @@
-f1=$1
-f2=$2
-if [ -e $f1 ]
-    then
-    set -- `ls -dl $f1`
-    filpr1=$1
-    else
-    echo "file doesnot exist"
-    exit
+if [ $# -eq 1 ]
+then
+grep $1 /etc/passwd >ud
+if [ $? -eq 0 ]
+then
+echo "user exist"
+h=`cut -d ":" -f 6 ud`
+echo "hm dir $1 and $h"
+else
+echo " not usr dir"
 fi
-if [ -e $f2 ]
-    then
-    set -- `ls -dl $f2`
-    filpr2=$1
-    else
-    echo "file doesnot exist"
-    exit
+else
+echo " entr usr nm"
 fi
-if [ "$filpr1" = "$filpr2" ]
-    then
-       echo "file permissions are identical"
-       echo "permisions is $filpr1"
-     
-   else
-        echo "file permissions are not identical"
-        echo "file permision of $f1 are $filpr1"
-        echo "file permision of $f2 are $filpr2"
-   fi
