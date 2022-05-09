@@ -86,4 +86,4 @@ Computer Science 64
 11b. Write an awkscript to compute gross salary of an employee accordingly to rule given
 below.
 If basic salary < 10000 then HRA=15% of basic & DA=45% of basic.
-If basic salary is >=1000 then HRA=20% of basic & DA=50% of basic.
+If basic salary is >=10000 then HRA=20% of basic & DA=50% of basic.
