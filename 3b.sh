@@ -16,7 +16,6 @@ done
 clear
 echo "-------------------------Terminal Locked-----------------------------"
 echo " Enter the password to unlock"
-stty -echo
 read p3
 stty -echo
 while [ "$p1" != "$p3" ]
@@ -25,10 +24,9 @@ clear
 echo "--------------------------Terminal Locked-----------------------------"
 echo "password does not match"
 echo "enter the correct password"
-stty -echo
 read p3
 stty echo
 done
 clear
 echo "--------------------------Terminal Unlocked---------------------------"
-clear
+
